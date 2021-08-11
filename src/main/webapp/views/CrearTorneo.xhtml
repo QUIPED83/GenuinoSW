@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></meta>
+<title>Crear torneo</title>
+<style>
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	color: #FF0000;
+}
+
+button {
+	border: 2px solid transparent;
+	background: #3498DB;
+	color: #ffffff;
+	font-size: 16px;
+	line-height: 15px;
+	padding: 5px 0;
+	text-decoration: none;
+	text-shadow: none;
+	border-radius: 3px;
+	box-shadow: none;
+	transition: 0.25s;
+	display: block;
+	width: 90px;
+	margin: 0 auto;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+}
+
+table {
+	margin: 0 auto;
+	border: none;
+	padding-top: 5%;
+}
+
+td {
+	padding: 10px;
+	border-top: 0px;
+	border-right: 0px;
+	border-bottom: 0px;
+	border-left: 0px;
+}
+
+input {
+	text-align: center;
+	background-color: #ECF0F1;
+	border: 2px solid transparent;
+	border-radius: 3px;
+	font-size: 16px;
+	font-weight: 200;
+	padding: 5px 0;
+	width: 250px;
+	transition: border .5s;
+}
+
+button:hover {
+	background: #0f4c81;
+}
+</style>
+</head>
+<body>
+	<p style="text-align: center; font-size: 18px;">
+		<b>Crear torneo</b>
+	</p>
+	<hr
+		style="width: 65%; height: 1px; color: #666666; margin-left: auto; margin-right: auto;"></hr>
+	<table style="width: 458px; height: 181px;" border="l">
+		<h:form>
+
+			<center>
+				<div class="mb-3">
+					<label for="nom_torneo" class="form-label">Nombre del
+						torneo:</label>
+					<h:inputText class="form-control" id="NombreTorneo"
+						value="#{torneoBO.torn.nombreTorneo}" />
+				</div>
+			</center>
+
+			<center>
+				<div class="mb-3">
+					<label for="fecha" class="form-label">Fecha:</label>
+					<h:inputText class="form-control" id="Fecha"
+						value="#{torneoBO.torn.fechaTorneo}" />
+				</div>
+			</center>
+
+			<center>
+				<div class="mb-3">
+					<label for="institucion" class="form-label">Institución
+						anfitriona:</label>
+					<h:inputText class="form-control" id="instAnf"
+						value="#{torneoBO.torn.institucionAnfitriona}" />
+				</div>
+			</center>
+			
+			<center>
+				<h:commandLink action="#{torneoBO.save()}" value="Guardar" onclick="registro()"
+					class="btn btn-info" />
+					</center>
+					
+					<center>
+				<h:commandLink action="#{torneoBO.next()}" value="Registrar Equipos"
+					class="btn btn-info" />
+					</center>
+					
+					<script>
+function registro() {
+  alert("Equipo registrado correctamente");
+}
+</script>
+		</h:form>
+	</table>
+	<br></br>
+</body>
+</html>

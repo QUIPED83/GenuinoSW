@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</meta>
+
+<style>
+button:hover {
+	background: #0f4c81;
+}
+
+.entrar:hover {
+	background: #131313;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+}
+
+input, textarea, select {
+	text-align: center;
+	background-color: #ECF0F1;
+	border: 2px solid transparent;
+	border-radius: 3px;
+	font-size: 16px;
+	font-weight: 200;
+	padding: 5px 0;
+	width: 200px;
+	transition: border .5s;
+}
+
+.guardar {
+	border: 2px solid transparent;
+	background: #3498DB;
+	color: #ffffff;
+	font-size: 16px;
+	line-height: 15px;
+	padding: 5px 0;
+	text-decoration: none;
+	text-shadow: none;
+	border-radius: 3px;
+	box-shadow: none;
+	transition: 0.25s;
+	display: block;
+	width: 150px;
+	margin: 0 auto;
+}
+
+table {
+	margin: 0 auto;
+	border: none;
+	padding-top: 5%;
+}
+
+td {
+	padding: 10px;
+	border-top: 0px;
+	border-right: 0px;
+	border-bottom: 0px;
+	border-left: 0px;
+}
+
+.entrar {
+	background: #9b9b9b;
+	color: #ffffff;
+	font-size: 16px;
+	line-height: 15px;
+	padding: 5px 0;
+	text-decoration: none;
+	text-shadow: none;
+	border-radius: 3px;
+	box-shadow: none;
+	transition: 0.25s;
+	display: block;
+	width: 150px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+}
+</style>
+<title>registro</title>
+</head>
+<body>
+	<f:view>
+		<blockquote></blockquote>
+		<p style="text-align: center; font-size: 18px;">
+			<b>Registro de participantes</b>
+		</p>
+		<hr
+			style="width: 65%; height: 1px; color: #666666; margin-left: auto; margin-right: auto;"></hr>
+		<table style="width: 458px; height: 181px;" border="l">
+			<h:form>
+
+
+				<!-- Face nombre del equipo -->
+
+				<center>
+					<div class="mb-3">
+						<label for="nombre" class="form-label">Nombre del equipo:</label>
+						<h:inputText class="form-control" id="NombreEquipo"
+							value="#{equipoBO.equi.nombreEquipo}" />
+					</div>
+				</center>
+				<center>
+					<div class="mb-3">
+						<label for="institucion" class="form-label">Escuela de
+							procedencia:</label>
+						<h:inputText class="form-control" id="InstitucionProcedencia"
+							value="#{equipoBO.equi.institucionProcedencia}" />
+					</div>
+				</center>
+				<center>
+					<div class="mb-3">
+						<label for="id_torneo" class="form-label">ID del torneo:</label>
+						<h:inputText class="form-control" id="id_Torneo"
+							value="#{equipoBO.equi.id_torneo}" />
+					</div>
+
+
+				</center>
+					<center>
+				<h:commandLink action="#{equipoBO.save()}" value="Guardar" onclick="registro()"
+					class="btn btn-info" />
+					</center>
+				<center>
+				<h:commandLink action="#{equipoBO.next()}" value="Registrar prototipos"
+					class="btn btn-info" />
+					</center>
+<script>
+function registro() {
+  alert("Equipo registrado correctamente");
+}
+</script>
+			</h:form>
+		</table>
+
+	</f:view>
+</body>
+</html>

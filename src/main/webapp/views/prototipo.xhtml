@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Registro de prototipos</title>
+	<link
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+		rel="stylesheet"
+		integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+		crossorigin="anonymous"></link>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+		crossorigin="anonymous"></script>
+	<style>
+body {
+	font-family: "Poppins", sans-serif;
+}
+
+input {
+	text-align: center;
+	background-color: #ECF0F1;
+	border: 0.5px solid transparent;
+	border-radius: 3px;
+	font-size: 16px;
+	font-weight: 200;
+	padding: 10px 0;
+	width: 250px;
+	transition: border .5s;
+}
+
+button {
+	border: 2px solid transparent;
+	background: #3498DB;
+	color: #ffffff;
+	font-size: 16px;
+	line-height: 15px;
+	padding: 5px 0;
+	text-decoration: none;
+	text-shadow: none;
+	border-radius: 3px;
+	box-shadow: none;
+	transition: 0.25s;
+	display: block;
+	width: 150px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+.alinear {
+	margin-top: 5%;
+}
+
+div {
+	margin: 2px;
+}
+
+button:hover {
+	background: #0f4c81;
+}
+</style>
+
+</h:head>
+<body>
+	<div class="container">
+		<p style="text-align: center; font-size: 18px;">
+			<b>Registro de prototipos</b>
+		</p>
+		<hr
+			style="width: 70%; height: 1px; color: #666666; margin-left: auto; margin-right: auto;"></hr>
+		<f:view>
+			<h:form>
+				<div class="alinear">
+
+					<center>
+						<div class="mb-3">
+							<label for="nombre" class="form-label">Nombre del
+								prototipo:</label>
+							<h:inputText class="form-control" id="NombrePrototipo"
+								value="#{prototipoBO.proto.nombrePrototipo}" />
+						</div>
+					</center>
+
+					<center>
+						<div class="mb-3">
+							<label for="nombre" class="form-label">Categoria:</label>
+							<h:inputText class="form-control" id="Categoria"
+								value="#{prototipoBO.proto.categoria}" />
+						</div>
+					</center>
+
+					<center>
+						<div class="mb-3">
+							<label for="nombre" class="form-label">ID Equipo:</label>
+							<h:inputText class="form-control" id="id_equipo"
+								value="#{prototipoBO.proto.id_equipo}" />
+						</div>
+					</center>
+
+					<center>
+						<div class="mb-3">
+							<label for="nombre" class="form-label">ID Torneo:</label>
+							<h:inputText class="form-control" id="id_torneo"
+								value="#{prototipoBO.proto.id_torneo}" />
+						</div>
+					</center>
+
+					<center>
+						<h:commandLink action="#{prototipoBO.save()}" value="Guardar"
+							onclick="registro()" class="btn btn-info" />
+					</center>
+					
+					<center>
+				<h:commandLink action="#{prototipoBO.next()}" value="Iniciar Torneo"
+					class="btn btn-info" />
+					</center>
+
+					<script>
+function registro() {
+  alert("Prototipo registrado correctamente!!");
+}
+</script>
+				</div>
+			</h:form>
+
+		</f:view>
+	</div>
+</body>
+</html>

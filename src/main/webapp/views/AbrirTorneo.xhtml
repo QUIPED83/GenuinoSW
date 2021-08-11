@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"></meta>
+    <title>Abrir torneo</title>
+    <style>
+      button:hover{
+background:#0f4c81;
+}
+      a{
+        text-decoration:none;
+      }
+    select{
+        text-align: center;
+background-color: #ECF0F1;
+border: 2px solid transparent;
+border-radius: 3px;
+font-size: 16px;
+font-weight: 200;
+padding: 5px 0;
+width: 250px;
+transition: border .5s;
+      }
+     body{
+         font-family: "Poppins", sans-serif;
+      }
+    td {
+    padding: 10px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-left: 0px;
+     
+    }
+table{
+      margin: 0 auto;
+      border:none;
+  padding-top: 5%;}
+       button{
+         
+   border: 2px solid transparent;
+  background: #3498DB;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 15px;
+  padding: 5px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 90px;
+  margin: 0 auto;
+        }
+    </style>
+  </head>
+  <body>
+    <p style="text-align: center; font-size:18px;"><b>Abrir torneo</b></p>
+    <hr style="width: 65%; height: 1px; color: #666666; margin-left: auto; margin-right: auto;">
+    <br></br>
+    <table style="width: 458px; height: 181px;" border="l">
+      <tbody>
+        <tr>
+          <td>Nombre del torneo:<br></br>
+          </td>
+          <td>
+            <select name="listaTorneos">
+              <option value="">Selecciona uno</option>
+            </select>
+            <br></br>
+          </td>
+        </tr>
+        <tr>
+          <td>Institución anfitriona<br></br>
+          </td>
+          <td>
+            <select name="listaInstitución">
+              <option value="">Selecciona uno</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Fecha<br></br>
+          </td>
+          <td>
+            <select name="listaFecha">
+              <option value="">Selecciona uno</option>
+            </select>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <center style="padding-top: 15px; padding-left:24%;"><a href="TorneoAbierto.html"><button>
+          Abrir </button></a></center>
+  </body>
+</html>
